@@ -1,0 +1,640 @@
+/* ─── Reset & Base ─── */
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; padding: 0; 
+}
+:root {
+  --primary: #5B6EF5;
+  --primary-light: #EEF0FF;
+  --yellow: #F5A623;
+  --success: #27AE60;
+  --danger: #E74C3C;
+  --warning: #F39C12;
+  --bg-color: #F7F8FC;
+  --card: #FFFFFF;
+  --text: #1A1A2E;
+  --faintPurple: #7A7A9D;
+  --border: #E2E4F0;
+  --radius: 14px;
+  --shadow: 0 4px 20px rgba(91,110,245,0.08);
+}
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+
+
+/* _________________NAV BAR___________________*/
+.navbar {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(91,110,245,0.06);
+}
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar .logo span { 
+  color: var(--yellow); 
+}
+
+.nav-links { 
+  display: flex; 
+  gap: 1.5rem; 
+  align-items: center; 
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--faintPurple); /* previously --muted */
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+.nav-links a:hover, .nav-links a.active { 
+  color: var(--primary); 
+}
+.nav-links .btn-nav {
+  background: var(--primary);
+  color: #fff !important;
+  padding: 0.45rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.nav-links .btn-nav:hover { 
+  background: #4a5de0; 
+}
+
+/* _________________GENERAL STYLING FOR BUTTONS___________________*/
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+/* Buttons with the fill */
+.btn-primary { 
+  background: var(--primary); 
+  color: #fff; 
+}
+.btn-primary:hover { 
+  background: #4a5de0; 
+  transform: translateY(-1px);
+}
+
+/* Buttons only with the outline */
+.btn-outline { 
+  background: transparent; 
+  color: var(--primary); 
+  border: 2px solid var(--primary); 
+}
+.btn-outline:hover { 
+  background: var(--primary-light); 
+}
+.btn-yellow { 
+  background: var(--yellow); 
+  color: #fff; 
+}
+.btn-yellow:hover { 
+  background: #e09510; 
+  transform: translateY(-1px); 
+}
+.btn-full { 
+  width: 100%; 
+}
+
+/* ─── Cards ─── */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  padding: 2rem;
+}
+
+
+
+/* _____________________HERO SECTION_____________________*/
+.hero {
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.hero .badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 20px;
+  margin-bottom: 1.2rem;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.hero h1 span { 
+  color: var(--primary); 
+}
+.hero p {
+  font-size: 1.1rem;
+  color: var(--faintPurple);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.hero-actions { 
+  display: flex; 
+  gap: 1rem; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+}
+
+
+/* ______________________FEATURES_______________________*/
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.0rem;
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  padding: 3rem 2rem;
+}
+.feature-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  border: 1px solid var(--border);
+  transition: all 0.25s ease;
+  cursor: default;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(91,110,245,0.12);
+  border-color: var(--primary);
+}
+.feature-card h3 { 
+  font-size: 1rem; 
+  font-weight: 700; 
+  margin-bottom: 0.4rem; 
+}
+.feature-card p { 
+  font-size: 0.88rem; 
+  color: var(--faintPurple); 
+  line-height: 1.6; 
+}
+
+
+/* ____________________HOW IT WORKS_____________________*/
+.overview{
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+.overview h2 {
+  font-size: 2.8rem; 
+  font-weight: 800; 
+  margin-bottom: 0.5rem;
+}
+.overview .subheading{
+  color: var(--faintPurple); 
+  margin-bottom: 2.5rem;
+}
+.overview p {
+  color: var(--faintPurple);
+  font-size: 0.88rem;
+}
+.overview h4 {
+  font-weight: 700; 
+  margin-bottom: 0.7rem;
+}
+.overview .overview-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.overview .overview-card {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin: 0 auto 0.8rem;
+}
+.overview .overview-step {
+  flex: 1; 
+  min-width: 160px;
+}
+
+
+/* ____________________PROGRESS BAR_____________________*/
+.progress-bar-wrap {
+  background: var(--border);
+  border-radius: 999px;
+  height: 6px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), #8B9FF5);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--faintPurple);
+  margin-bottom: 0.5rem;
+}
+
+
+
+/* ____________________QUESTIONNAIRE_____________________*/
+.questionContainer{
+  max-width: 740px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+.questionnaire-step.active { 
+  display: block; 
+  animation: fadeUp 0.3s ease; 
+}
+.questionnaire-step { 
+  display: none; 
+}
+.questionnaire-step h2 {
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  margin-bottom: 0.4rem; 
+}
+.questionnaire-step .q-hint { 
+  font-size: 1rem; 
+  color: var(--faintPurple); 
+  margin-bottom: 1.5rem; 
+}
+.questionnaire-step h2, .questionnaire-step .q-hint {
+  text-align: center;
+}
+
+
+
+/* ____________________FORM ELEMENTS_____________________*/
+.form-group { margin-bottom: 1.2rem; }
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+  color: var(--text);
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: var(--card);
+  color: var(--text);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+  font-family: inherit;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(91,110,245,0.12);
+}
+textarea { 
+  resize: vertical; 
+  min-height: 100px; 
+}
+/* Radio / Checkbox Options */
+.option-group { display: flex; flex-direction: column; gap: 0.7rem; }
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.85rem 1.1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+  background: var(--card);
+}
+
+.option-item:hover { border-color: var(--primary); background: var(--primary-light); }
+.option-item.selected { border-color: var(--primary); background: var(--primary-light); }
+
+
+
+
+/* ____________________URGENCY BANNER_____________________*/
+.urgency-banner {
+  border-radius: 12px;
+  padding: 1rem 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.urgency-banner.urgent { 
+  background: #FEE2E2; 
+  color: var(--danger); 
+  border: 1px solid #FCA5A5; 
+}
+.urgency-banner.warning { 
+  background: #FEF3C7; 
+  color: var(--warning); 
+  border: 1px solid #FCD34D; 
+}
+.urgency-banner.ok { 
+  background: #D1FAE5; 
+  color: var(--success);
+  border: 1px solid #6EE7B7; 
+}
+
+
+/* ____________________CHECKLIST_____________________*/
+.checklist-wrap {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.checklist-header { margin-bottom: 2rem; }
+.checklist-header h1 { font-size: 1.8rem; font-weight: 800; }
+.checklist-header p { color: var(--faintPurple); margin-top: 0.3rem; }
+.checklist-section { margin-bottom: 2rem; }
+
+.checklist-section h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--faintPurple);
+  margin-bottom: 0.8rem;
+}
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 0.6rem;
+  transition: all 0.25s ease;
+}
+
+.checklist-item.done { border-color: var(--success); background: var(--bg-color); }
+.checklist-item.done .item-title { text-decoration: line-through; color: var(--faintPurple); }
+
+.checklist-item .check-box {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  margin-top: 1px;
+}
+.checklist-item .check-box.checked {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+
+.item-title { font-size: 0.95rem; font-weight: 600; }
+.item-desc { font-size: 0.82rem; color: var(--faintPurple); margin-top: 0.2rem; }
+
+.checklist-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+
+
+/* ____________________UPLOAD SECTION ZONE_____________________*/
+.upload-wrap { 
+  max-width: 700px; 
+  margin: 3rem auto; 
+  padding: 0 1.5rem; 
+}
+.upload-zone {
+  border: 2.5px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: var(--card);
+  position: relative;
+}
+.upload-zone:hover, .upload-zone.dragover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.upload-zone h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
+.upload-zone p { font-size: 0.88rem; color: var(--faintPurple); }
+.card h3 { margin-bottom: 1rem}
+.card .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+.card .card-container p {
+  font-size: 0.82rem;
+                font-weight: 700;
+                color: var(--primary);
+                margin-bottom: 0.3rem;
+}
+.card .card-container ul {
+  font-size: 0.85rem; 
+  line-height: 1.9; 
+  padding-left: 1rem;
+}
+.document-buttons {
+  display: flex; 
+  gap: 1rem; 
+  margin-top: 2rem; 
+  flex-wrap: wrap;
+}
+
+
+
+/* ____________________LAWYER PAGE- BOILERPLATE_____________________*/
+.lawyer-wrap { max-width: 800px; margin: 3rem auto; padding: 0 1.5rem; }
+
+.lawyer-wrap .lawyer-hero {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(135deg, var(--primary-light) 0%, #fff 100%);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+.lawyer-wrap .lawyer-hero h1 { font-size: 1.9rem; font-weight: 800; margin-bottom: 1rem; }
+.lawyer-wrap .lawyer-hero p { color: var(--faintPurple); font-size: 0.97rem; max-width: 500px; margin: 0 auto 1.5rem; }
+
+.lawyer-wrap span {
+  font-size: 0.85rem;
+  background: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);   
+}
+
+.lawyers-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 1.2rem; 
+  margin-bottom: 2rem; 
+}
+.lawyer-card {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: all 0.25s ease;
+}
+.lawyer-card:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow); }
+
+.lawyer-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), #8B9FF5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.lawyer-info h3 { font-size: 1rem; font-weight: 700; }
+.lawyer-info .spec { font-size: 0.82rem; color: var(--primary); font-weight: 600; margin: 0.2rem 0; }
+.lawyer-info .lang { font-size: 0.8rem; color: var(--faintPurple); }
+.lawyer-info .rating { font-size: 0.82rem; margin-top: 0.4rem; }
+
+.booking-container {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem
+
+}
+.booking-form { background: var(--card); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1.8rem; }
+.booking-form h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.2rem; }
+
+
+
+
+/* ____________________TOAST POP-UP_____________________
+    Toast- temporary notification pop up in the corne of the screen
+*/
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--text);
+  color: #fff;
+  padding: 0.9rem 1.4rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  max-width: 320px;
+}
+.toast.show { 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+
+
+
+/* ____________________FOOTER SECTION_____________________*/
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.83rem;
+  color: var(--faintPurple);
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
+}
+
+
+
+
+
+/* ____________________MEDIA QUERIES_____________________*/
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2rem; }
+  .navbar { padding: 0 1rem; }
+  .nav-links a:not(.btn-nav) { display: none; }
+  .checklist-actions { flex-direction: column; }
+}

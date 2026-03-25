@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Checklist – StayLegal</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="logo">stayLegal</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="questionnaire.html">Questionnaire</a>
+        <a href="documents.html">Documents</a>
+        <a href="lawyer.html">Find a Lawyer</a>
+        <a href="lawyer-dashboard.html" class="btn-nav">Lawyer Portal</a>
+      </div>
+    </nav>
+
+    <div class="checklist-wrap">
+      <!-- Urgency Banner -->
+      <div class="urgency-banner" id="urgencyBanner"></div>
+
+      <div class="checklist-header">
+        <h1 id="checklistTitle">Your Personalized Checklist</h1>
+        <p id="checklistSubtitle">
+          Based on your answers, here's exactly what you need.
+        </p>
+      </div>
+
+      <!-- Checklist sections injected by JS -->
+      <div id="checklistBody"></div>
+
+      <div class="checklist-actions">
+        <a href="documents.html" class="btn btn-primary"> Upload Documents</a>
+        <a href="lawyer.html" class="btn btn-yellow"> Book a Lawyer</a>
+        <button class="btn btn-outline" onclick="window.print()">
+          Print Checklist
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 StayLegal · Always verify with official German authorities
+    </footer>
+    <div class="toast" id="toast"></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

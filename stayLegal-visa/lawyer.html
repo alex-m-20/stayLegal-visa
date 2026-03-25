@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Lawyer – StayLegal</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="logo">stayLegal</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="questionnaire.html">Questionnaire</a>
+        <a href="documents.html">Documents</a>
+        <a href="lawyer.html" class="active">Find a Lawyer</a>
+        <a href="" class="btn-nav">Lawyer Portal</a>
+      </div>
+    </nav>
+
+    <!-- Top floating section-->
+    <div class="lawyer-wrap">
+      <div class="lawyer-hero">
+        <h1>Talk to an Immigration Lawyer</h1>
+        <p>
+          Our vetted lawyers specialize in German student visa renewals and
+          speak multiple languages.
+        </p>
+        <div>
+          <span>Multilingual Support</span>
+          <span>Same-week Appointments</span>
+          <span>Video or In-Person</span>
+        </div>
+      </div>
+
+      <!-- Lawyer Cards -->
+      <h2>Available Lawyers</h2>
+      <div class="lawyers-grid">
+        <div class="lawyer-card">
+          <div class="lawyer-avatar">AM</div>
+          <div class="lawyer-info">
+            <h3>Andreas Martin</h3>
+            <p class="spec">Student Visa & Residence Permits</p>
+            <p class="lang">German, English, French</p>
+            <p class="rating">⭐ 4.9 · Berlin · Video & In-Person</p>
+            <button class="btn btn-primary" style="margin-top: 0.8rem">
+              Book Consultation
+            </button>
+          </div>
+        </div>
+
+        <div class="lawyer-card">
+          <div class="lawyer-avatar">JM</div>
+          <div class="lawyer-info">
+            <h3>John Müller</h3>
+            <p class="spec">International Students & Family Visas</p>
+            <p class="lang">German, English, Arabic</p>
+            <p class="rating">⭐ 4.8 · Munich · Video Only</p>
+            <button class="btn btn-primary" style="margin-top: 0.8rem">
+              Book Consultation
+            </button>
+          </div>
+        </div>
+
+        <div class="lawyer-card">
+          <div class="lawyer-avatar">LA</div>
+          <div class="lawyer-info">
+            <h3>Laura Allens</h3>
+            <p class="spec">Student Visas & Work Permits</p>
+            <p class="lang">German, English, Portuguese, Spanish</p>
+            <p class="rating">⭐ 4.7 · Frankfurt · Video & In-Person</p>
+            <button class="btn btn-primary" style="margin-top: 0.8rem">
+              Book Consultation
+            </button>
+          </div>
+        </div>
+
+        <div class="lawyer-card">
+          <div class="lawyer-avatar">KS</div>
+          <div class="lawyer-info">
+            <h3>Kanzlei Stöbe</h3>
+            <p class="spec">Student & Research Visas</p>
+            <p class="lang">German, English, Mandarin, Cantonese</p>
+            <p class="rating">⭐ 5.0 · Hamburg · Video Only</p>
+            <button class="btn btn-primary" style="margin-top: 0.8rem">
+              Book Consultation
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="booking-form" id="bookingForm">
+        <h2>Book a Consultation</h2>
+        <div class="booking-container">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="bookName" placeholder="Full name" />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="bookEmail" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label>Preferred Date</label>
+            <input type="date" id="bookDate" />
+          </div>
+          <div class="form-group">
+            <label>Preferred Time</label>
+            <select>
+              <option value="">Select time…</option>
+              <option>09:00 – 09:30</option>
+              <option>09:30 – 10:00</option>
+              <option>10:00 – 10:30</option>
+              <option>11:00 – 11:30</option>
+              <option>14:00 – 14:30</option>
+              <option>15:00 – 15:30</option>
+              <option>16:00 – 16:30</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Format</label>
+          <div style="display: flex; gap: 0.8rem">
+            <label class="option-item" style="flex: 1">
+              <input type="radio" name="format" value="video" checked />
+              Video Call
+            </label>
+            <label class="option-item" style="flex: 1">
+              <input type="radio" name="format" value="inperson" />
+              In Person
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Brief description of your situation (optional)</label>
+          <textarea
+            placeholder="e.g. My visa expires in 3 weeks, I'm a Master's student at TU Berlin…"
+          ></textarea>
+        </div>
+        <button class="btn btn-primary btn-full">Confirm Booking</button>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 StayLegal · Always verify with official German authorities
+    </footer>
+    <div class="toast" id="toast"></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
